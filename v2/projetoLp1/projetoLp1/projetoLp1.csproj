@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6083473E-B96D-4CEB-BF4B-8789F673C498}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>projetoLp1</RootNamespace>
+    <AssemblyName>projetoLp1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\DAOcozinha.cs" />
+    <Compile Include="DAO\DAOmaquiagem.cs" />
+    <Compile Include="DAO\DAOperfume.cs" />
+    <Compile Include="DAO\DAOquarto.cs" />
+    <Compile Include="DAO\DAOroupa.cs" />
+    <Compile Include="DAO\DAOvenda.cs" />
+    <Compile Include="DATABASE\Database.cs" />
+    <Compile Include="MODEL\Cliente.cs" />
+    <Compile Include="MODEL\Cozinha.cs" />
+    <Compile Include="DAO\DAOcliente.cs" />
+    <Compile Include="DAO\DAOproduto.cs" />
+    <Compile Include="MODEL\Estoque.cs" />
+    <Compile Include="VIEW\formCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formCadastroCliente.Designer.cs">
+      <DependentUpon>formCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formCadastroProduto.Designer.cs">
+      <DependentUpon>formCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formConfiguracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formConfiguracao.Designer.cs">
+      <DependentUpon>formConfiguracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formConsulta.Designer.cs">
+      <DependentUpon>formConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formDataPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formDataPagamento.Designer.cs">
+      <DependentUpon>formDataPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formEstoque.Designer.cs">
+      <DependentUpon>formEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formGerarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formGerarPedido.Designer.cs">
+      <DependentUpon>formGerarPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formNovaCampanha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formNovaCampanha.Designer.cs">
+      <DependentUpon>formNovaCampanha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formTelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formTelaPrincipal.Designer.cs">
+      <DependentUpon>formTelaPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formTemporada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formTemporada.Designer.cs">
+      <DependentUpon>formTemporada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formVendas.Designer.cs">
+      <DependentUpon>formVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\formVerificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\formVerificarCliente.Designer.cs">
+      <DependentUpon>formVerificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\maquiagem.cs" />
+    <Compile Include="VIEW\MDIPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\MDIPrincipal.Designer.cs">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\Perfume.cs" />
+    <Compile Include="MODEL\Produto.cs" />
+    <Compile Include="MODEL\Quarto.cs" />
+    <Compile Include="MODEL\Roupa.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MODEL\Venda.cs" />
+    <EmbeddedResource Include="VIEW\formCadastroCliente.resx">
+      <DependentUpon>formCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formCadastroProduto.resx">
+      <DependentUpon>formCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formConfiguracao.resx">
+      <DependentUpon>formConfiguracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formConsulta.resx">
+      <DependentUpon>formConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formDataPagamento.resx">
+      <DependentUpon>formDataPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formEstoque.resx">
+      <DependentUpon>formEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formGerarPedido.resx">
+      <DependentUpon>formGerarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formNovaCampanha.resx">
+      <DependentUpon>formNovaCampanha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formTelaPrincipal.resx">
+      <DependentUpon>formTelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formTemporada.resx">
+      <DependentUpon>formTemporada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formVendas.resx">
+      <DependentUpon>formVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\formVerificarCliente.resx">
+      <DependentUpon>formVerificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\MDIPrincipal.resx">
+      <DependentUpon>MDIPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Cliente.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
